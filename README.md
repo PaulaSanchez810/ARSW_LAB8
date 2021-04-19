@@ -136,14 +136,16 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
     > ECONNRESET: significa el el recurso cerro la concxion, se creo que fue porque el servidor estaba muy cargado y no puso reponder a la solicitud.
 12. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
 pegar imagen 
-14. 
-¿Aumentar el tamaño de la VM es una buena solución en este escenario?
+13. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?
 > No. 
-¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
+    ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
 > se procesa un poco mas reapido pero no es mucha la diferencia es muy minim.
-16. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
-17. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
-18. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+14. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
+> La infraestructura se vuelve muhco más costosa, en nuestro caso, el costo aumentó en casi 20 veces por mes.
+15. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
+> Si hubo mejora en el consumo de CPU debido a que la segunda máquina tenía dos CPUs, y la mejoa en los tiempos de respuesta fué mínima, de no mas de 5 segundos.
+16. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+> No, el comportamiento es lineal.
 
 ### Parte 2 - Escalabilidad horizontal
 
