@@ -28,7 +28,7 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 ![Imágen 1](images/part1/part1-vm-basic-config.png)
 
-![Imágen 1](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/crecionMaquina.png)
+> ![Imágen 1](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/crecionMaquina.png)
 
 2. Para conectarse a la VM use el siguiente comando, donde las `x` las debe remplazar por la IP de su propia VM.
 
@@ -53,26 +53,26 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 ![](images/part1/part1-vm-3000InboudRule.png)
 
-![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/1-6.png)
+> ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/1-6.png)
 
 7. La función que calcula en enésimo número de la secuencia de Fibonacci está muy mal construido y consume bastante CPU para obtener la respuesta. Usando la consola del Browser documente los tiempos de respuesta para dicho endpoint usando los siguintes valores:
-![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/1-6.2.png)
-    * 1000000 = 38s
-    * 1010000 = 31s
-    * 1020000 =31s
-    * 1030000 =31s
-    * 1040000 =32s
-    * 1050000 = 33s
-    * 1060000 = 34s
-    * 1070000 = 33s
-    * 1080000 = 33s
-    * 1090000 = 34s    
+> ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/1-6.2.png)
+>    * 1000000 = 38s
+>    * 1010000 = 31s
+>    * 1020000 =31s
+>    * 1030000 =31s
+>    * 1040000 =32s
+>    * 1050000 = 33s
+>    * 1060000 = 34s
+>    * 1070000 = 33s
+>    * 1080000 = 33s
+>    * 1090000 = 34s    
 
 8. Dírijase ahora a Azure y verifique el consumo de CPU para la VM. (Los resultados pueden tardar 5 minutos en aparecer).
 
 ![Imágen 2](images/part1/part1-vm-cpu.png)
 
-![Imágen 2](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/1-8.png)
+> ![Imágen 2](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/1-8.png)
 
 9. Ahora usaremos Postman para simular una carga concurrente a nuestro sistema. Siga estos pasos.
     * Instale newman con el comando `npm install newman -g`. Para conocer más de Newman consulte el siguiente [enlace](https://learning.getpostman.com/docs/postman/collection-runs/command-line-integration-with-newman/).
@@ -90,16 +90,16 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 ![Imágen 3](images/part1/part1-vm-resize.png)
 
 11. Una vez el cambio se vea reflejado, repita el paso 7, 8 y 9.
-    * 1000000 = 25s
-    * 1010000 = 27s
-    * 1020000 = 29s
-    * 1030000 = 29s
-    * 1040000 = 28s
-    * 1050000 = 28s
-    * 1060000 = 30s
-    * 1070000 = 30s
-    * 1080000 = 30s
-    * 1090000 = 32s   
+>    * 1000000 = 25s
+>    * 1010000 = 27s
+>    * 1020000 = 29s
+>    * 1030000 = 29s
+>    * 1040000 = 28s
+>    * 1050000 = 28s
+>    * 1060000 = 30s
+>    * 1070000 = 30s
+>    * 1080000 = 30s
+>    * 1090000 = 32s   
 
 13. Evalue el escenario de calidad asociado al requerimiento no funcional de escalabilidad y concluya si usando este modelo de escalabilidad logramos cumplirlo.
 
@@ -112,6 +112,7 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 1. ¿Cuántos y cuáles recursos crea Azure junto con la VM?
 > crea los siguientes recursos como muestra en la imagen. 
 > ![Imágen 1](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/crecionMaquina.png)
+
 3. ¿Brevemente describa para qué sirve cada recurso?
 > VERTICAL-SCALABILITY : Maquina Virtual. 
 > Vertical-scalability566: Interfases de red.
@@ -136,14 +137,16 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
     > ECONNRESET: significa el el recurso cerro la concxion, se creo que fue porque el servidor estaba muy cargado y no puso reponder a la solicitud.
 12. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
 pegar imagen 
-14. 
-¿Aumentar el tamaño de la VM es una buena solución en este escenario?
+13. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?
 > No. 
-¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
+    ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
 > se procesa un poco mas reapido pero no es mucha la diferencia es muy minim.
-16. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
-17. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
-18. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+14. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
+> La infraestructura se vuelve muhco más costosa, en nuestro caso, el costo aumentó en casi 20 veces por mes.
+15. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
+> Si hubo mejora en el consumo de CPU debido a que la segunda máquina tenía dos CPUs, y la mejoa en los tiempos de respuesta fué mínima, de no mas de 5 segundos.
+16. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+> No, el comportamiento es lineal.
 
 ### Parte 2 - Escalabilidad horizontal
 
