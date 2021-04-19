@@ -2,7 +2,7 @@
 ### Arquitecturas de Software - ARSW
 > Integrantes:
 > * 👩 Paula Andrea Guevara Sánchez.
-> * 👨 Daniel Felipe Muñoz Rincón.
+> * 👨 Daniel Felipe Rincón Muñoz.
 
 ## Escalamiento en Azure con Maquinas Virtuales, Sacale Sets y Service Plans
 
