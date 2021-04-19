@@ -28,6 +28,8 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 ![Imágen 1](images/part1/part1-vm-basic-config.png)
 
+![Imágen 1](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/crecionMaquina.png)
+
 2. Para conectarse a la VM use el siguiente comando, donde las `x` las debe remplazar por la IP de su propia VM.
 
     `ssh scalability_lab@xxx.xxx.xxx.xxx`
@@ -51,21 +53,26 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 ![](images/part1/part1-vm-3000InboudRule.png)
 
+![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/1-6.png)
+
 7. La función que calcula en enésimo número de la secuencia de Fibonacci está muy mal construido y consume bastante CPU para obtener la respuesta. Usando la consola del Browser documente los tiempos de respuesta para dicho endpoint usando los siguintes valores:
-    * 1000000
-    * 1010000
-    * 1020000
-    * 1030000
-    * 1040000
-    * 1050000
-    * 1060000
-    * 1070000
-    * 1080000
-    * 1090000    
+![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/1-6.2.png)
+    * 1000000 = 38s
+    * 1010000 = 31s
+    * 1020000 =31s
+    * 1030000 =31s
+    * 1040000 =32s
+    * 1050000 = 33s
+    * 1060000 = 34s
+    * 1070000 = 33s
+    * 1080000 = 33s
+    * 1090000 = 34s    
 
 8. Dírijase ahora a Azure y verifique el consumo de CPU para la VM. (Los resultados pueden tardar 5 minutos en aparecer).
 
 ![Imágen 2](images/part1/part1-vm-cpu.png)
+
+![Imágen 2](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/1-8.png)
 
 9. Ahora usaremos Postman para simular una carga concurrente a nuestro sistema. Siga estos pasos.
     * Instale newman con el comando `npm install newman -g`. Para conocer más de Newman consulte el siguiente [enlace](https://learning.getpostman.com/docs/postman/collection-runs/command-line-integration-with-newman/).
@@ -83,8 +90,19 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 ![Imágen 3](images/part1/part1-vm-resize.png)
 
 11. Una vez el cambio se vea reflejado, repita el paso 7, 8 y 9.
-12. Evalue el escenario de calidad asociado al requerimiento no funcional de escalabilidad y concluya si usando este modelo de escalabilidad logramos cumplirlo.
-13. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
+    * 1000000 = 25s
+    * 1010000 = 27s
+    * 1020000 = 29s
+    * 1030000 = 29s
+    * 1040000 = 28s
+    * 1050000 = 28s
+    * 1060000 = 30s
+    * 1070000 = 30s
+    * 1080000 = 30s
+    * 1090000 = 32s   
+
+13. Evalue el escenario de calidad asociado al requerimiento no funcional de escalabilidad y concluya si usando este modelo de escalabilidad logramos cumplirlo.
+14. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
 
 **Preguntas**
 
