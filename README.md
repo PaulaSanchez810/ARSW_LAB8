@@ -90,8 +90,19 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 ![Imágen 3](images/part1/part1-vm-resize.png)
 
 11. Una vez el cambio se vea reflejado, repita el paso 7, 8 y 9.
-12. Evalue el escenario de calidad asociado al requerimiento no funcional de escalabilidad y concluya si usando este modelo de escalabilidad logramos cumplirlo.
-13. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
+    * 1000000 = 25s
+    * 1010000 = 27s
+    * 1020000 = 29s
+    * 1030000 = 29s
+    * 1040000 = 28s
+    * 1050000 = 28s
+    * 1060000 = 30s
+    * 1070000 = 30s
+    * 1080000 = 30s
+    * 1090000 = 32s   
+
+13. Evalue el escenario de calidad asociado al requerimiento no funcional de escalabilidad y concluya si usando este modelo de escalabilidad logramos cumplirlo.
+14. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
 
 **Preguntas**
 
