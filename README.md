@@ -234,16 +234,30 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 
 **Preguntas**
 
-* ¿Cuáles son los tipos de balanceadores de carga en Azure y en qué se diferencian?, ¿Qué es SKU, qué tipos hay y en qué se diferencian?, ¿Por qué el balanceador de carga necesita una IP pública?
+* ¿Cuáles son los tipos de balanceadores de carga en Azure y en qué se diferencian?
+   >Azure Load Balancer puede configurarse como un balanceador público o interno:
+   > *Público: Tendrá una IP pública en el frontend en la que recibirá peticiones que repartirá entre las máquinas del backend.
+   > *Interno: Tendrá una IP privada y no será accesible desde Internet. Igual que en el público, las peticiones que lleguen a la IP del frontend se distribuirán entre las             máquinas del backend.
+*  ¿Qué es SKU, qué tipos hay y en qué se diferencian?
+   > SKU es la abreviatura de 'Unidad de mantenimiento de existencias. En términos de la nube de Microsoft Azure, básicamente significan un SKU que se puede comprar bajo un          producto. Tiene un montón de formas diferentes del producto.
+*  ¿Por qué el balanceador de carga necesita una IP pública?
+   >  la dirección IP de front-end es pública, lo que permite que se agregue como punto de conexión al perfil de Traffic Manager más adelante.
 * ¿Cuál es el propósito del *Backend Pool*?
+   > El Backend Pool define el grupo de recursos que servirán tráfico para una regla de balanceo de carga específica.
 * ¿Cuál es el propósito del *Health Probe*?
+   > El Health Probe permite al balanceador detectar el estado de los endpoints, con esta información determina cuales instancias del Backend Pool recibirán nuevas peticiones.
 * ¿Cuál es el propósito de la *Load Balancing Rule*? ¿Qué tipos de sesión persistente existen, por qué esto es importante y cómo puede afectar la escalabilidad del sistema?.
+   > La Load Balancing Rule define cómo el tráfico es distribuido a la máquinas virtuales, se pueden definir sin persistencia, o con persistencia de IP del cliente, cuando esta      opción está habilitada, las peticiones enviadas por un cliente siempre serán redirigidas hacia la misma máquina. La escalabilidad  puede verse afectada ya que una máquina        nueva no se utilizará a menos que haya clientes nuevos.
 * ¿Qué es una *Virtual Network*? ¿Qué es una *Subnet*? ¿Para qué sirven los *address space* y *address range*?
+   >  Una Virtual Network es una red interna en Azure que cumple la función de conectar internamente diferentes componentes en la nube. Una Subnet es una sub-red en una Virtual       Network. Los Address Space son las direcciones de red asignables dentro de una Virtual Network. Los Address Range son las direcciones de red asignables dentro de una             Subnet
 * ¿Qué son las *Availability Zone* y por qué seleccionamos 3 diferentes zonas?. ¿Qué significa que una IP sea *zone-redundant*?
+   > Una Availability Zone es una ubicación física única en una región. Cada zona esta hecha de uno o mas centros de datos, equipados con energía, refrigeración y servicio de        red independientes. Los servicios Zone-Redundant replican las aplicaciones y datos a través de las Availability Zones para protegerlas de puntos únicos de fallo.
 * ¿Cuál es el propósito del *Network Security Group*?
+   > El Network Security Group nos ayuda a mapear reglas de red que pueden ser aplicadas a diferentes recursos a la vez, de esta forma, si queremos realizar una modificación de      red, lo haremos desde del grupo, y no desde cada una de las máquinas.
 * Informe de newman 1 (Punto 2)
+   IMAGEN NEWMAN
 * Presente el Diagrama de Despliegue de la solución.
-
+   
 
 
 
