@@ -102,7 +102,10 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
     * 1090000 = 32s   
 
 13. Evalue el escenario de calidad asociado al requerimiento no funcional de escalabilidad y concluya si usando este modelo de escalabilidad logramos cumplirlo.
-14. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
+
+> No se cumple con los requerimientos de escalabilidad, debido a que una petición se demora 30 segundos, debido a que la mejora que se hizo antes de escalar maquina y escalarla fue minima. 
+
+15. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
 
 **Preguntas**
 
