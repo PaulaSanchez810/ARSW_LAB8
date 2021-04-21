@@ -141,7 +141,8 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
   > ECONNRESET: significa el el recurso cerro la concxion, se creo que fue porque el servidor estaba muy cargado y no puso reponder a la solicitud.
    
 * ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
-pegar imagen 
+> Como podemos ver en la siguiente imagen las diferecias entre B2ms y B1l se centran en la CPU, menoria, almacenamiento, rendimiento base de la CPU y rendimiento maximo de la CPU de la maquna virtual
+> ![Imágen 3](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/preguntas-12.png) 
 
 * ¿Aumentar el tamaño de la VM es una buena solución en este escenario?
 > No. 
