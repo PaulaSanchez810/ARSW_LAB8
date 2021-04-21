@@ -120,10 +120,9 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 > * VERTICAL-SCALABILITY-nsg: para establecer reglas de seguridad sobre la red.
 > * SCALABILITY_LAB-vnet: red interna.
 
-5. 
-¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? 
+5.1 ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? 
 > Porque el proceso esta siendo utilizado por el usuario conectado y cuando se desconecta se detiene el proceso. 
-¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
+5.2 ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
 > Para que se pueda acceder al servicio que esta corriendo en ese puerto, desde un medio externo.
 
 7. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
