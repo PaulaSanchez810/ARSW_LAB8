@@ -84,6 +84,7 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
     newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALANCING_AZURE].postman_environment.json -n 10 &
     newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALANCING_AZURE].postman_environment.json -n 10
     ```
+> ![Imágen 1](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/1-9.png)
 
 10. La cantidad de CPU consumida es bastante grande y un conjunto considerable de peticiones concurrentes pueden hacer fallar nuestro servicio. Para solucionarlo usaremos una estrategia de Escalamiento Vertical. En Azure diríjase a la sección *size* y a continuación seleccione el tamaño `B2ms`.
 
@@ -100,6 +101,10 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 >    * 1070000 = 30s
 >    * 1080000 = 30s
 >    * 1090000 = 32s   
+
+> ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/11-2.8.png)
+
+> ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/11-3.9.png)
 
 13. Evalue el escenario de calidad asociado al requerimiento no funcional de escalabilidad y concluya si usando este modelo de escalabilidad logramos cumplirlo.
 
@@ -259,7 +264,12 @@ http://52.155.223.248/fibonacci/1
 
 3. Agregue una 4 maquina virtual y realice las pruebas de newman, pero esta vez no lance 2 peticiones en paralelo, sino que incrementelo a 4. Haga un informe donde presente el comportamiento de la CPU de las 4 VM y explique porque la tasa de éxito de las peticiones aumento con este estilo de escalabilidad.
 
+
 > ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/4-3.png)
+> ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/4-vm1.png)
+> ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/4-vm2.png)
+> ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/4-vm3.png)
+> ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/4-vm4.png)
 
 ```
 newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALANCING_AZURE].postman_environment.json -n 10 &
@@ -291,7 +301,7 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 * ¿Cuál es el propósito del *Network Security Group*?
    > El Network Security Group nos ayuda a mapear reglas de red que pueden ser aplicadas a diferentes recursos a la vez, de esta forma, si queremos realizar una modificación de      red, lo haremos desde del grupo, y no desde cada una de las máquinas.
 * Informe de newman 1 (Punto 2)
-   > ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/11-3.9.png)
+   > ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/1-9.png)
    > ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/4-2.png)
 * Presente el Diagrama de Despliegue de la solución.
    > ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/utimopunto.png)
