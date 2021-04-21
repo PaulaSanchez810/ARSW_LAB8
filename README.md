@@ -109,43 +109,53 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 **Preguntas**
 
-1. ¿Cuántos y cuáles recursos crea Azure junto con la VM?
+* ¿Cuántos y cuáles recursos crea Azure junto con la VM?
 > crea los siguientes recursos como muestra en la imagen. 
 > ![Imágen 1](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/crecionMaquina.png)
 
-3. ¿Brevemente describa para qué sirve cada recurso?
-> VERTICAL-SCALABILITY : Maquina Virtual. 
-> Vertical-scalability566: Interfases de red.
-> VERTICAL-SCALABILITY-ip: dirección IP publica.
-> VERTICAL-SCALABILITY-nsg: para establecer reglas de seguridad sobre la red.
-> SCALABILITY_LAB-vnet: red interna.
+* ¿Brevemente describa para qué sirve cada recurso?
+> * VERTICAL-SCALABILITY : Maquina Virtual.
+> * Vertical-scalability566: Interfases de red.
+> * VERTICAL-SCALABILITY-ip: dirección IP publica.
+> * VERTICAL-SCALABILITY-nsg: para establecer reglas de seguridad sobre la red.
+> * SCALABILITY_LAB-vnet: red interna.
 
-5. 
-¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? 
+* ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? 
 > Porque el proceso esta siendo utilizado por el usuario conectado y cuando se desconecta se detiene el proceso. 
-¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
+
+* ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
 > Para que se pueda acceder al servicio que esta corriendo en ese puerto, desde un medio externo.
 
-7. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
+* Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
 > Porque son números muy grandes y tiene que hacer varias iteraciones.
-9. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
+
+* Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 > Porque es un algoritmo computacionalmente pesado.
-11. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
-    * Tiempos de ejecución de cada petición.
-    > el tiempos de ejecución fue de 50.7, porque estaban corriendo dos peticiones en paralelo.
-    * Si hubo fallos documentelos y explique.
-    > ECONNRESET: significa el el recurso cerro la concxion, se creo que fue porque el servidor estaba muy cargado y no puso reponder a la solicitud.
-12. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
+
+* Adjunte la imagen del resumen de la ejecución de Postman. Interprete:.
+  > * Tiempos de ejecución de cada petición.
+  
+  > El tiempos de ejecución fue de 50.7, porque estaban corriendo dos peticiones en paralelo.
+  > * Si hubo fallos documentelos y explique.
+  
+  > ECONNRESET: significa el el recurso cerro la concxion, se creo que fue porque el servidor estaba muy cargado y no puso reponder a la solicitud.
+   
+* ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
 pegar imagen 
-13. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?
+
+* ¿Aumentar el tamaño de la VM es una buena solución en este escenario?
 > No. 
-    ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
+
+* ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
 > se procesa un poco mas reapido pero no es mucha la diferencia es muy minim.
-14. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
+
+* ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
 > La infraestructura se vuelve muhco más costosa, en nuestro caso, el costo aumentó en casi 20 veces por mes.
-15. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
+
+* ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
 > Si hubo mejora en el consumo de CPU debido a que la segunda máquina tenía dos CPUs, y la mejoa en los tiempos de respuesta fué mínima, de no mas de 5 segundos.
-16. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+
+* Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
 > No, el comportamiento es lineal.
 
 ### Parte 2 - Escalabilidad horizontal
@@ -234,16 +244,30 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 
 **Preguntas**
 
-* ¿Cuáles son los tipos de balanceadores de carga en Azure y en qué se diferencian?, ¿Qué es SKU, qué tipos hay y en qué se diferencian?, ¿Por qué el balanceador de carga necesita una IP pública?
+* ¿Cuáles son los tipos de balanceadores de carga en Azure y en qué se diferencian?
+   >Azure Load Balancer puede configurarse como un balanceador público o interno:
+   > *Público: Tendrá una IP pública en el frontend en la que recibirá peticiones que repartirá entre las máquinas del backend.
+   > *Interno: Tendrá una IP privada y no será accesible desde Internet. Igual que en el público, las peticiones que lleguen a la IP del frontend se distribuirán entre las             máquinas del backend.
+*  ¿Qué es SKU, qué tipos hay y en qué se diferencian?
+   > SKU es la abreviatura de 'Unidad de mantenimiento de existencias. En términos de la nube de Microsoft Azure, básicamente significan un SKU que se puede comprar bajo un          producto. Tiene un montón de formas diferentes del producto.
+*  ¿Por qué el balanceador de carga necesita una IP pública?
+   >  la dirección IP de front-end es pública, lo que permite que se agregue como punto de conexión al perfil de Traffic Manager más adelante.
 * ¿Cuál es el propósito del *Backend Pool*?
+   > El Backend Pool define el grupo de recursos que servirán tráfico para una regla de balanceo de carga específica.
 * ¿Cuál es el propósito del *Health Probe*?
+   > El Health Probe permite al balanceador detectar el estado de los endpoints, con esta información determina cuales instancias del Backend Pool recibirán nuevas peticiones.
 * ¿Cuál es el propósito de la *Load Balancing Rule*? ¿Qué tipos de sesión persistente existen, por qué esto es importante y cómo puede afectar la escalabilidad del sistema?.
+   > La Load Balancing Rule define cómo el tráfico es distribuido a la máquinas virtuales, se pueden definir sin persistencia, o con persistencia de IP del cliente, cuando esta      opción está habilitada, las peticiones enviadas por un cliente siempre serán redirigidas hacia la misma máquina. La escalabilidad  puede verse afectada ya que una máquina        nueva no se utilizará a menos que haya clientes nuevos.
 * ¿Qué es una *Virtual Network*? ¿Qué es una *Subnet*? ¿Para qué sirven los *address space* y *address range*?
+   >  Una Virtual Network es una red interna en Azure que cumple la función de conectar internamente diferentes componentes en la nube. Una Subnet es una sub-red en una Virtual       Network. Los Address Space son las direcciones de red asignables dentro de una Virtual Network. Los Address Range son las direcciones de red asignables dentro de una             Subnet
 * ¿Qué son las *Availability Zone* y por qué seleccionamos 3 diferentes zonas?. ¿Qué significa que una IP sea *zone-redundant*?
+   > Una Availability Zone es una ubicación física única en una región. Cada zona esta hecha de uno o mas centros de datos, equipados con energía, refrigeración y servicio de        red independientes. Los servicios Zone-Redundant replican las aplicaciones y datos a través de las Availability Zones para protegerlas de puntos únicos de fallo.
 * ¿Cuál es el propósito del *Network Security Group*?
+   > El Network Security Group nos ayuda a mapear reglas de red que pueden ser aplicadas a diferentes recursos a la vez, de esta forma, si queremos realizar una modificación de      red, lo haremos desde del grupo, y no desde cada una de las máquinas.
 * Informe de newman 1 (Punto 2)
+   IMAGEN NEWMAN
 * Presente el Diagrama de Despliegue de la solución.
-
+   
 
 
 
