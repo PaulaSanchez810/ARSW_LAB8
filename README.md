@@ -114,11 +114,11 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 > ![Imágen 1](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/crecionMaquina.png)
 
 3. ¿Brevemente describa para qué sirve cada recurso?
-> VERTICAL-SCALABILITY : Maquina Virtual. 
-> Vertical-scalability566: Interfases de red.
-> VERTICAL-SCALABILITY-ip: dirección IP publica.
-> VERTICAL-SCALABILITY-nsg: para establecer reglas de seguridad sobre la red.
-> SCALABILITY_LAB-vnet: red interna.
+> * VERTICAL-SCALABILITY : Maquina Virtual.
+> * Vertical-scalability566: Interfases de red.
+> * VERTICAL-SCALABILITY-ip: dirección IP publica.
+> * VERTICAL-SCALABILITY-nsg: para establecer reglas de seguridad sobre la red.
+> * SCALABILITY_LAB-vnet: red interna.
 
 5. 
 ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? 
