@@ -301,6 +301,7 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 * ¿Cuál es el propósito del *Network Security Group*?
    > El Network Security Group nos ayuda a mapear reglas de red que pueden ser aplicadas a diferentes recursos a la vez, de esta forma, si queremos realizar una modificación de      red, lo haremos desde del grupo, y no desde cada una de las máquinas.
 * Informe de newman 1 (Punto 2)
+   > Como podemos ver en la siguientes imagenes si se evidencio un tiempo de reducción con el segundo puno, debido a que el tiempo de espera paso de 54.9s a 26.8s.
    > ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/1-9.png)
    > ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/4-2.png)
 * Presente el Diagrama de Despliegue de la solución.
