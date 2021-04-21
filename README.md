@@ -109,53 +109,53 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 **Preguntas**
 
-1 ¿Cuántos y cuáles recursos crea Azure junto con la VM?
+* ¿Cuántos y cuáles recursos crea Azure junto con la VM?
 > crea los siguientes recursos como muestra en la imagen. 
 > ![Imágen 1](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/crecionMaquina.png)
 
-3 ¿Brevemente describa para qué sirve cada recurso?
+* ¿Brevemente describa para qué sirve cada recurso?
 > * VERTICAL-SCALABILITY : Maquina Virtual.
 > * Vertical-scalability566: Interfases de red.
 > * VERTICAL-SCALABILITY-ip: dirección IP publica.
 > * VERTICAL-SCALABILITY-nsg: para establecer reglas de seguridad sobre la red.
 > * SCALABILITY_LAB-vnet: red interna.
 
-4.1 ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? 
+* ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? 
 > Porque el proceso esta siendo utilizado por el usuario conectado y cuando se desconecta se detiene el proceso. 
 
-4.2 ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
+* ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
 > Para que se pueda acceder al servicio que esta corriendo en ese puerto, desde un medio externo.
 
-5 Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
+* Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
 > Porque son números muy grandes y tiene que hacer varias iteraciones.
 
-6 Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
+* Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 > Porque es un algoritmo computacionalmente pesado.
 
-7 Adjunte la imagen del resumen de la ejecución de Postman. Interprete:.
+* Adjunte la imagen del resumen de la ejecución de Postman. Interprete:.
   > * Tiempos de ejecución de cada petición.
   
-  > el tiempos de ejecución fue de 50.7, porque estaban corriendo dos peticiones en paralelo.
+  > El tiempos de ejecución fue de 50.7, porque estaban corriendo dos peticiones en paralelo.
   > * Si hubo fallos documentelos y explique.
   
   > ECONNRESET: significa el el recurso cerro la concxion, se creo que fue porque el servidor estaba muy cargado y no puso reponder a la solicitud.
    
-8 ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
+* ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
 pegar imagen 
 
-9.1 ¿Aumentar el tamaño de la VM es una buena solución en este escenario?
+* ¿Aumentar el tamaño de la VM es una buena solución en este escenario?
 > No. 
 
-9.2 ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
+* ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
 > se procesa un poco mas reapido pero no es mucha la diferencia es muy minim.
 
-10 ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
+* ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
 > La infraestructura se vuelve muhco más costosa, en nuestro caso, el costo aumentó en casi 20 veces por mes.
 
-11 ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
+* ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
 > Si hubo mejora en el consumo de CPU debido a que la segunda máquina tenía dos CPUs, y la mejoa en los tiempos de respuesta fué mínima, de no mas de 5 segundos.
 
-12 Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+* Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
 > No, el comportamiento es lineal.
 
 ### Parte 2 - Escalabilidad horizontal
