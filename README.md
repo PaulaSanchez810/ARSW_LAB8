@@ -177,17 +177,25 @@ Antes de continuar puede eliminar el grupo de recursos anterior para evitar gast
 
 ![](images/part2/part2-lb-bp-create.png)
 
+> ![Imágen 1](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/2-2.png)
+
 3. A continuación cree un *Health Probe*, guiese con la siguiente imágen.
 
 ![](images/part2/part2-lb-hp-create.png)
+
+> ![Imágen 1](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/2-3.png)
 
 4. A continuación cree un *Load Balancing Rule*, guiese con la siguiente imágen.
 
 ![](images/part2/part2-lb-lbr-create.png)
 
+> ![Imágen 1](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/2-3.png)
+
 5. Cree una *Virtual Network* dentro del grupo de recursos, guiese con la siguiente imágen.
 
 ![](images/part2/part2-vn-create.png)
+
+> ![Imágen 1](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/2-4.png)
 
 #### Crear las maquinas virtuales (Nodos)
 
