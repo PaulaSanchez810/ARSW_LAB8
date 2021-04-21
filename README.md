@@ -107,7 +107,9 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 15. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
 
-**Preguntas**
+---
+
+❓ **Preguntas**
 
 * ¿Cuántos y cuáles recursos crea Azure junto con la VM?
 > crea los siguientes recursos como muestra en la imagen. 
@@ -158,6 +160,8 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 * Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
 > No, el comportamiento es lineal.
+
+---
 
 ### Parte 2 - Escalabilidad horizontal
 
