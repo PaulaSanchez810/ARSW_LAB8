@@ -197,6 +197,8 @@ Antes de continuar puede eliminar el grupo de recursos anterior para evitar gast
 
 > ![Imágen 1](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/2-4.png)
 
+---
+
 #### Crear las maquinas virtuales (Nodos)
 
 Ahora vamos a crear 3 VMs (VM1, VM2 y VM3) con direcciones IP públicas standar en 3 diferentes zonas de disponibilidad. Después las agregaremos al balanceador de carga.
@@ -204,6 +206,8 @@ Ahora vamos a crear 3 VMs (VM1, VM2 y VM3) con direcciones IP públicas standar 
 1. En la configuración básica de la VM guíese por la siguiente imágen. Es importante que se fije en la "Avaiability Zone", donde la VM1 será 1, la VM2 será 2 y la VM3 será 3.
 
 ![](images/part2/part2-vm-create1.png)
+
+> ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/3-nodos-a.png)
 
 2. En la configuración de networking, verifique que se ha seleccionado la *Virtual Network*  y la *Subnet* creadas anteriormente. Adicionalmente asigne una IP pública y no olvide habilitar la redundancia de zona.
 
