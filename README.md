@@ -239,6 +239,8 @@ forever start FibonacciApp.js
 
 Realice este proceso para las 3 VMs, por ahora lo haremos a mano una por una, sin embargo es importante que usted sepa que existen herramientas para aumatizar este proceso, entre ellas encontramos Azure Resource Manager, OsDisk Images, Terraform con Vagrant y Paker, Puppet, Ansible entre otras.
 
+---
+
 #### Probar el resultado final de nuestra infraestructura
 
 1. Porsupuesto el endpoint de acceso a nuestro sistema será la IP pública del balanceador de carga, primero verifiquemos que los servicios básicos están funcionando, consuma los siguientes recursos:
@@ -250,7 +252,14 @@ http://52.155.223.248/fibonacci/1
 
 2. Realice las pruebas de carga con `newman` que se realizaron en la parte 1 y haga un informe comparativo donde contraste: tiempos de respuesta, cantidad de peticiones respondidas con éxito, costos de las 2 infraestrucruras, es decir, la que desarrollamos con balanceo de carga horizontal y la que se hizo con una maquina virtual escalada.
 
+> ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/4-2%2C2.png)
+> ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/4-2%2C3.png)
+> ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/4-2.png)
+
+
 3. Agregue una 4 maquina virtual y realice las pruebas de newman, pero esta vez no lance 2 peticiones en paralelo, sino que incrementelo a 4. Haga un informe donde presente el comportamiento de la CPU de las 4 VM y explique porque la tasa de éxito de las peticiones aumento con este estilo de escalabilidad.
+
+> ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/4-3.png)
 
 ```
 newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALANCING_AZURE].postman_environment.json -n 10 &
@@ -259,7 +268,7 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALANCING_AZURE].postman_environment.json -n 10
 ```
 
-**Preguntas**
+❓ **Preguntas**
 
 * ¿Cuáles son los tipos de balanceadores de carga en Azure y en qué se diferencian?
    >Azure Load Balancer puede configurarse como un balanceador público o interno:
@@ -282,9 +291,10 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 * ¿Cuál es el propósito del *Network Security Group*?
    > El Network Security Group nos ayuda a mapear reglas de red que pueden ser aplicadas a diferentes recursos a la vez, de esta forma, si queremos realizar una modificación de      red, lo haremos desde del grupo, y no desde cada una de las máquinas.
 * Informe de newman 1 (Punto 2)
-   IMAGEN NEWMAN
+   > ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part1/11-3.9.png)
+   > ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/4-2.png)
 * Presente el Diagrama de Despliegue de la solución.
-   
+   > ![](https://github.com/PaulaSanchez810/ARSW_LAB8/blob/master/images/part2/utimopunto.png)
 
 
 
