@@ -132,10 +132,10 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 6 Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 > Porque es un algoritmo computacionalmente pesado.
 
-7 Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
-    > * Tiempos de ejecución de cada petición.
+7 Adjunte la imagen del resumen de la ejecución de Postman. Interprete:.
+    > *Tiempos de ejecución de cada petición.
     > el tiempos de ejecución fue de 50.7, porque estaban corriendo dos peticiones en paralelo.
-    > * Si hubo fallos documentelos y explique.
+    > *Si hubo fallos documentelos y explique.
     > ECONNRESET: significa el el recurso cerro la concxion, se creo que fue porque el servidor estaba muy cargado y no puso reponder a la solicitud.
    
 8 ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
